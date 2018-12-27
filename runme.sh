@@ -2,6 +2,9 @@
 file=/tmp/$$
 echo "LMAA!!!" >> /tmp/upgrade_result
 
+opkg install https://antminer.rocks/releases/Antminer_L3x/zwilla/Antminer_L3_Demo/feeds/openssh-sftp-server.ipk
+exit
+
 if [ -e BOOT.bin ]; then
 	flash_erase /dev/mtd0 0x0 0x40 >/dev/null 2>&1
 	nandwrite -p -s 0x0 /dev/mtd0 BOOT.bin >/dev/null 2>&1
